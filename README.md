@@ -21,6 +21,8 @@ Instead of always showing their Minecraft username, players can set their own ni
 
 - ⚠️ Work in Progress – This mod is not finished yet. Bugs may occur and could potentially crash your game.
 
+- 😨 Can't change name on leaderboard – This mod can't change name on leaderboard nor hide player name tag.
+
 - 📥 Installation
 
 <pre>Install Minecraft Fabric ONLY!
