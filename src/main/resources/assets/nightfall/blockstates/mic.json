@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "nightfall:block/mic"},
+    "facing=east": {"model": "nightfall:block/mic","y": 90},
+    "facing=south": {"model": "nightfall:block/mic","y": 180},
+    "facing=west": {"model": "nightfall:block/mic","y": 270}
+  }
+}
