@@ -1,6 +1,6 @@
 📢 Plasmo Voice Addon – Custom Overlay Name
 
-This project is an addon for Plasmo Voice
+This project is an addon for [Plasmo Voice](https://modrinth.com/plugin/plasmo-voice)
  that allows players to customize their display name in the voice chat overlay.
 Instead of always showing their Minecraft username, players can set their own nickname that appears whenever they talk.
 
@@ -8,7 +8,7 @@ Instead of always showing their Minecraft username, players can set their own ni
 
 - 🔧 Custom Overlay Name – Change your overlay name in-game with:
 
-/nick set "<your nickname>"
+<pre>  /nick set "<your nickname>"  </pre>
 
 
 - 📝 Configurable Project – Anyone can download and modify this addon.
@@ -23,30 +23,30 @@ Instead of always showing their Minecraft username, players can set their own ni
 
 - 📥 Installation
 
-Install Minecraft Fabric ONLY!
+<pre>  Install Minecraft Fabric ONLY!
 
-Make sure Plasmo Voice is installed on the server.
+Make sure Plasmo Voice(version 2.1.5) is installed on the server.
 
 Download this addon and place it in the server’s mods folder.
 
-Restart the server.
+Restart the server.  </pre>
 
 - 📝 Usage
 
-Join the server and run:
+<pre>  Join the server and run:
 
-/nick set "<your nickname>"
+/nick set "<your nickname>" 
 
 
-Your new nickname will now appear on the Plasmo Voice overlay whenever you speak.
+Your new nickname will now appear on the Plasmo Voice overlay whenever you speak.  </pre>
 
 - 📌 Notes
 
-Your Minecraft username does not change – only the Plasmo Voice overlay name.
+<pre>  Your Minecraft username does not change – only the Plasmo Voice overlay name.
 
 This addon is cosmetic only.
 
-Bugs and crashes may happen since this is still under development.
+Bugs and crashes may happen since this is still under development.  </pre>
 
 - 📜 License
 
