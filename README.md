@@ -8,7 +8,7 @@ Instead of always showing their Minecraft username, players can set their own ni
 
 - 🔧 Custom Overlay Name – Change your overlay name in-game with:
 
-<pre>  /nick set "<your nickname>"  </pre>
+<pre>/nick set "<your nickname>"  </pre>
 
 
 - 📝 Configurable Project – Anyone can download and modify this addon.
@@ -23,7 +23,7 @@ Instead of always showing their Minecraft username, players can set their own ni
 
 - 📥 Installation
 
-<pre>  Install Minecraft Fabric ONLY!
+<pre>Install Minecraft Fabric ONLY!
 
 Make sure Plasmo Voice(version 2.1.5) is installed on the server.
 
@@ -33,7 +33,7 @@ Restart the server.  </pre>
 
 - 📝 Usage
 
-<pre>  Join the server and run:
+<pre>Join the server and run:
 
 /nick set "<your nickname>" 
 
@@ -42,7 +42,7 @@ Your new nickname will now appear on the Plasmo Voice overlay whenever you speak
 
 - 📌 Notes
 
-<pre>  Your Minecraft username does not change – only the Plasmo Voice overlay name.
+<pre>Your Minecraft username does not change – only the Plasmo Voice overlay name.
 
 This addon is cosmetic only.
 
