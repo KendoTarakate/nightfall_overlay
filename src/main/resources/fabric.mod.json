@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "nightfalloverlay",
+	"version": "1.0.0",
+	"name": "NightFallOverlay",
+	"description": "Nuh-uh",
+	"authors": [
+		"Kendo and Nightfall team"
+	],
+	"contact": {
+		"homepage": "-",
+		"sources": "-"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/nightfalloverlay/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.nightfall.NightFallOverlay"
+		],
+		"client": [
+			"net.nightfall.NightFallOverlayClient"
+		],
+		"fabric-datagen": [
+			"net.nightfall.NightFallOverlayDataGenerator"
+		]
+	},
+	"mixins": [
+		"nightfalloverlay.mixins.json",
+		{
+			"config": "nightfalloverlay.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"plasmovoice": ">=${version}"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
