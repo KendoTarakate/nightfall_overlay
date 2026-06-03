@@ -35,11 +35,6 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - name: limit gradle heap for CI runners
-        # gradle.properties requests -Xmx12G for local builds; a later entry wins,
-        # so this keeps the CI daemon within the runner's memory.
-        run: echo "org.gradle.jvmargs=-Xmx6g" >> gradle.properties
-
       - name: build
         run: ./gradlew build --stacktrace
 
