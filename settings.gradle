@@ -5,6 +5,14 @@ pluginManagement {
 			url = 'https://maven.fabricmc.net/'
 		}
 		maven {
+			name = 'Architectury'
+			url = 'https://maven.architectury.dev/'
+		}
+		maven {
+			name = 'MinecraftForge'
+			url = 'https://maven.minecraftforge.net/'
+		}
+		maven {
 			name = 'plasmoverse-releases'
 			url = 'https://repo.plasmoverse.com/releases'
 		}
@@ -12,3 +20,8 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
+
+rootProject.name = 'nightfalloverlay'
+
+include 'fabric'
+include 'forge'

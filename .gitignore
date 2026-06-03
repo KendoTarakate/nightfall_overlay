@@ -1,0 +1,21 @@
+# Gradle / build output
+.gradle/
+build/
+
+# Minecraft dev run directories (worlds, logs, server.properties, etc.)
+run/
+
+# Jars staged locally for manual server testing (e.g. Plasmo Voice)
+test-server-mods/
+
+# IDE files
+.idea/
+*.iml
+.settings/
+bin/
+*.launch
+.vscode/
+
+# OS
+*.DS_Store
+Thumbs.db

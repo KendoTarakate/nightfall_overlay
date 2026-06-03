@@ -1,0 +1,84 @@
+plugins {
+	id 'dev.architectury.loom' version "${loom_version}"
+}
+
+base {
+	archivesName = "${rootProject.archives_base_name}-forge"
+}
+
+version = rootProject.mod_version
+group = rootProject.maven_group
+
+repositories {
+	maven {
+		name = 'plasmoverse-releases'
+		url = 'https://repo.plasmoverse.com/releases'
+	}
+	maven {
+		name = 'plasmoverse-snapshots'
+		url = 'https://repo.plasmoverse.com/snapshots'
+	}
+}
+
+loom {
+	silentMojangMappingsLicense()
+
+	forge {
+		// No mixins are required: the mod uses Forge events for everything.
+	}
+
+	runs {
+		// A second client so two players can join the same dev server — needed to
+		// watch the nickname rename update on another player's tab list and chat.
+		// Use it together with the "Minecraft Server" run config: start the
+		// server, then launch "Minecraft Client" (Player) and "Minecraft Client 2"
+		// (Player2) and connect both to localhost.
+		client2 {
+			inherit client
+			name = "Minecraft Client 2"
+			runDir = "run/client2"
+			programArgs("--username", "Player2")
+		}
+	}
+}
+
+// Share the loader-agnostic sources with the Fabric module. These touch no
+// remapped Minecraft classes, so they compile to byte-identical .class files
+// and can be deduped in the merged universal jar.
+sourceSets {
+	main {
+		java.srcDir "$rootDir/src/shared/java"
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+	mappings loom.officialMojangMappings()
+	forge "net.minecraftforge:forge:${rootProject.forge_version}"
+
+	// Plasmo Voice is provided at runtime by the Plasmo Voice mod on the server.
+	compileOnly 'su.plo.voice.api:server:2.1.5'
+	compileOnly 'su.plo.voice.api:client:2.1.5'
+
+	// gson/guava are shipped by Minecraft itself; only needed at compile time
+	// for the shared NickStorage sources.
+	compileOnly group: 'com.google.code.gson', name: 'gson', version: '2.7'
+}
+
+processResources {
+	def buildProps = ["version": rootProject.mod_version]
+	inputs.properties buildProps
+
+	filesMatching("META-INF/mods.toml") {
+		expand buildProps
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 17
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
